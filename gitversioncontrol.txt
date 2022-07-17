@@ -1,0 +1,80 @@
+SCCS - Source Code Control System
+RCS - Revision Control System
+
+page 30 Applications of Version control
+
+SAML - Security Assertion Markup Language
+
+SCIM - System for Cross-domain Identity Management
+
+git config --global user.name learner-ltd.com
+
+# below command removet the user credential
+git config --­­global ­­unset user.name
+
+#for setup ssh connection to user credential
+ssh­keygen ­-t rsa ­-b 4096 ­-C "kifeh@poly­swarm.com"
+
+# to login with ssh
+ssh -T git@github.com
+
+# to add the repository properly
+git remote add origin (and the address we got)  
+
+Prepare the files for the first commit using the
+following command: git add
+src/lib/compute.py
+
+Commit the files using the following command: git
+commit ­-m "Initial commit"
+
+
+You can push the repository files to the repository on
+GitHub using the following command: git push ­u
+origin master
+
+start from GITHUB ETIQUETTE
+
+ACTIVITY 1: CREATING A REPOSITORY start from there
+
+1. Create a branch to host this modification by using the
+following command:
+git branch ft­add­encapsulating­class
+
+git checkout ft­add­encapsulating­class
+
+ft: Use this prefix for a feature branch.
+bg: This prefix should be used for bug branches.
+fx: The fx prefix is utilized to identify a branch for
+rolling out hotfixes.
+ch: This prefix is used for chore branches. Chores
+refer to tasks like styling code and rearranging files
+in a repository.
+
+12. Push the changes made to a remote branch by using
+the following command:
+git push origin ft­add­encapsulating­class
+
+1. git diff ­­ src/lib/
+2. git diff ­­ src/lib/compute.py
+(1) and (2) compare the version in the working directory
+of the specified paths to the version that's present in the
+index.
+
+1. git diff HEAD ­­ src/
+2. git diff
+f4e4e8d5b292dc94468b6f88223cac4f55c03713
+­­ src/lib/
+3. git diff master
+(1) Compares the version in the working directory ofthe src directory, to the version of the most recent
+commit on the current branch.
+(2) Compares the version in the working directory of
+the src directory to the version in the snapshot
+represented by the hash
+f4e4e8d5b292dc94468b6f88223cac4f55c03713.
+(3) Compares the version in the working directory of
+the src directory to the version at the tip of the
+branch master.
+
+
+EXERCISE 14: ADDING FILES TO THE INDEX
